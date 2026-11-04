@@ -1,35 +1,160 @@
 <!doctype html>
 <html lang="sk">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moje portfólio — začiatok</title>
-  <!-- Vzhľad stránky je v samostatnom súbore styles.css (vrstva CSS) -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Osobné portfólio s projektmi, profilom a kontaktom."
+    />
+    <title>Jakub Oráč | Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="topbar"></div>
 
-  <main class="uvitanie">
-    <div class="emoji">👋</div>
-    <h1>Tu vznikne moje portfólio</h1>
-    <p class="podtext">
-      Toto je štartová stránka kurzu <strong>Tvorba webstránok</strong>.
-      Odteraz ju budeš meniť ty — s pomocou AI asistenta.
-    </p>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand" aria-label="Domov">Jakub</a>
 
-    <div class="karta">
-      <p class="karta-nadpis">Ako začať:</p>
-      <ol>
-        <li>Otvor <strong>Copilot Chat</strong> (ikona Copilota vpravo) — sem píšeš, čo chceš vytvoriť.</li>
-        <li>Tento súbor <code>index.html</code> si pozri v <strong>živom náhľade</strong>: pravý klik naň → <em>Show Preview</em>.</li>
-        <li>Choď na <strong>Blok 7</strong> kurzu a postupuj podľa neho.</li>
-      </ol>
-    </div>
+        <button class="nav-toggle" aria-label="Otvoriť navigáciu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-    <p class="poznamka">
-      Keď spravíš prvú zmenu, tento text pokojne zmaž — je len na úvod.
-    </p>
-  </main>
+        <nav class="main-nav" id="nav-menu" aria-label="Hlavná navigácia">
+          <a href="#projekty">Projekty</a>
+          <a href="#o-mne">O mne</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </div>
+    </header>
 
-</body>
+    <main id="home">
+      <section class="hero container reveal">
+        <p class="eyebrow">front-end developer / designer</p>
+        <h1>Jakub Oráč</h1>
+        <p class="intro">
+          Vytváram moderné, čisté a výkonné webové produkty, ktoré spájajú
+          dizajn, technológiu a jednoduché používateľské skúsenosti.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projekty">Pozri projekty</a>
+          <a class="button button-secondary" href="#kontakt">Napíš mi</a>
+        </div>
+      </section>
+
+      <section id="projekty" class="projects container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">projekty</p>
+          <h2>Moje najnovšie práce</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-badge">web</div>
+            <h3>Studio North</h3>
+            <p>
+              Redizajn webovej prezentácie pre kreativne štúdio s dôrazom na
+              čistú typografiu, minimalistický layout a lepšiu konverziu.
+            </p>
+            <ul>
+              <li>UI/UX</li>
+              <li>HTML / CSS</li>
+              <li>Responsívny dizajn</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge">app</div>
+            <h3>FlowTrack</h3>
+            <p>
+              Dashboard pre správu úloh a produktivity s jednoduchou navigáciou,
+              jasnými dátami a efektívnym pracovným tokom.
+            </p>
+            <ul>
+              <li>Dashboard</li>
+              <li>JavaScript</li>
+              <li>UX flow</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge">brand</div>
+            <h3>Nova Atelier</h3>
+            <p>
+              Vizuálna identita a landing page pre módnu značku s elegantným,
+              vzdušným charakterom a premium atmosférou.
+            </p>
+            <ul>
+              <li>Branding</li>
+              <li>Dizajn</li>
+              <li>Landing page</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="o-mne" class="about container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">o mne</p>
+          <h2>Vytváram weby, ktoré sa dajú používať bez námahy</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              Som webový dizajnér a front-end vývojár so zameraním na čistý,
+              moderný a ľahko ovládateľný dizajn. Mojou prioritou je vytvárať
+              riešenia, ktoré pôsobia profesiónálne a zároveň sú jednoduché
+              pre používateľa.
+            </p>
+            <p>
+              Pracujem s HTML, CSS a JavaScript, venujem sa responzívnemu UI,
+              typografii a vytváraniu príjemných používateľských zážitkov.
+              Rád prepojujem estetiku so funkčnosťou.
+            </p>
+          </div>
+
+          <div class="about-panel">
+            <p class="panel-label">Zameranie</p>
+            <ul>
+              <li>Webové stránky</li>
+              <li>Landing pages</li>
+              <li>Portfólio a brand identity</li>
+              <li>UI/UX koncepty</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="kontakt" class="site-footer reveal">
+      <div class="container footer-wrap">
+        <div>
+          <p class="eyebrow">kontakt</p>
+          <h3>Nechajme spolu niečo vytvoriť.</h3>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:jakub.orac@example.com">jakub.orac@example.com</a>
+          <a href="tel:+421912345678">+421 912 345 678</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> Jakub Oráč</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
