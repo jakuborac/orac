@@ -154,8 +154,40 @@ a {
 }
 
 .hero {
+  position: relative;
   padding: clamp(4rem, 8vw, 8rem) 0 2rem;
   text-align: center;
+  background-image: linear-gradient(rgba(5, 11, 20, 0.58), rgba(5, 11, 20, 0.7)), url("img/hero-stlp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 0 24px 24px;
+  overflow: hidden;
+}
+
+.hero-art {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 3%;
+  width: clamp(130px, 18vw, 220px);
+  height: auto;
+  opacity: 0.62;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: rgba(5, 11, 20, 0.28);
+}
+
+.hero > :not(.hero-art) {
+  position: relative;
+  z-index: 2;
 }
 
 .eyebrow {
@@ -238,6 +270,21 @@ a {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: -0.06em;
+}
+
+.section-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.section-icon {
+  flex: 0 0 1.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 0.25em;
+  color: var(--accent);
+  stroke-width: 1.5;
 }
 
 .projects-grid {
@@ -430,6 +477,10 @@ a {
   .projects-grid,
   .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    display: none;
   }
 
   .main-nav {
