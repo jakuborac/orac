@@ -350,6 +350,22 @@ a {
   align-items: stretch;
 }
 
+.about-profile {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.65fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
 .about-copy {
   padding: 2rem 0;
 }
@@ -531,6 +547,14 @@ a {
   .projects,
   .about {
     padding: 3rem 0;
+  }
+
+  .about-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    width: min(100%, 220px);
   }
 
   .site-footer {
